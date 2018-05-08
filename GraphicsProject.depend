@@ -1,0 +1,368 @@
+# depslib dependency file v1.0
+1518892442 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\grafikuskezdikit16\main.cpp
+	"graphics.hpp"
+	<iostream>
+
+1488256928 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\grafikuskezdikit16\include\graphics.hpp
+	<string>
+
+1519408287 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\hazi2\main.cpp
+	"graphics.hpp"
+	<iostream>
+	<cmath>
+	<vector>
+	<time.h>
+	<cstdlib>
+
+1488256928 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\hazi2\include\graphics.hpp
+	<string>
+
+1519650165 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak3\main.cpp
+	"graphics.hpp"
+	<iostream>
+	<time.h>
+	<vector>
+	<cstdlib>
+
+1488256928 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak3\include\graphics.hpp
+	<string>
+
+1520704065 source:e:\gyak4\main.cpp
+	"graphics.hpp"
+	<iostream>
+	<time.h>
+	<vector>
+	<cstdlib>
+	<sstream>
+
+1488224528 e:\gyak4\include\graphics.hpp
+	<string>
+
+1520858401 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak4\main.cpp
+	"graphics.hpp"
+	<iostream>
+	<time.h>
+	<vector>
+	<cstdlib>
+	<sstream>
+
+1488224528 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak4\include\graphics.hpp
+	<string>
+
+1522931843 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak6\main.cpp
+	"graphics.hpp"
+	<fstream>
+	<time.h>
+	<vector>
+	"widget.hpp"
+	"numset.hpp"
+	"choose.hpp"
+
+1488228128 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak6\include\graphics.hpp
+	<string>
+
+1523783677 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak6\numset.cpp
+	"numset.hpp"
+	<string>
+
+1523829692 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak6\numset.hpp
+	"widget.hpp"
+
+1523783677 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak6\widget.hpp
+	<cstdlib>
+	<sstream>
+	"graphics.hpp"
+
+1523783171 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak6\widget.cpp
+	"widget.hpp"
+
+1523783677 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak6\choose.cpp
+	"choose.hpp"
+	<iostream>
+	<cmath>
+
+1523783677 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak6\choose.hpp
+	<vector>
+	<string>
+	"widget.hpp"
+
+1524472307 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak8\choose.cpp
+	"choose.hpp"
+	<iostream>
+	<cmath>
+
+1524471736 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak8\choose.hpp
+	<vector>
+	<string>
+	"widget.hpp"
+	"koord.hpp"
+
+1523830242 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak8\widget.hpp
+	<cstdlib>
+	<sstream>
+	"graphics.hpp"
+
+1488228128 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak8\include\graphics.hpp
+	<string>
+
+1523889414 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak8\inserttext.cpp
+	"inserttext.hpp"
+	<string>
+
+1523888805 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak8\inserttext.hpp
+	"widget.hpp"
+
+1523888287 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak8\main.cpp
+	"graphics.hpp"
+	<fstream>
+	<vector>
+	<time.h>
+	"widget.hpp"
+	"numset.hpp"
+	"choose.hpp"
+	"window.hpp"
+	"mywindow.hpp"
+
+1523892536 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak8\numset.hpp
+	"widget.hpp"
+
+1523887115 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak8\window.hpp
+	"widget.hpp"
+	"graphics.hpp"
+	<vector>
+
+1524472499 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak8\mywindow.hpp
+	"window.hpp"
+	"widget.hpp"
+	"choose.hpp"
+	"numset.hpp"
+	"inserttext.hpp"
+	"simpletext.hpp"
+	"koord.hpp"
+
+1524473307 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak8\mywindow.cpp
+	"mywindow.hpp"
+	<sstream>
+
+1523892536 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak8\numset.cpp
+	"numset.hpp"
+	<string>
+
+1523830234 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak8\widget.cpp
+	"widget.hpp"
+
+1523887847 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak8\window.cpp
+	"window.hpp"
+
+1524469764 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak8\koord.hpp
+	<string>
+
+1524472919 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak8\simpletext.hpp
+	"widget.hpp"
+	<string>
+
+1524472938 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak8\simpletext.cpp
+	"simpletext.hpp"
+
+1524567321 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak9\choose.cpp
+	"choose.hpp"
+	<iostream>
+	<cmath>
+
+1524471736 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak9\choose.hpp
+	<vector>
+	<string>
+	"widget.hpp"
+	"koord.hpp"
+
+1523830242 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak9\widget.hpp
+	<cstdlib>
+	<sstream>
+	"graphics.hpp"
+
+1488228128 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak9\include\graphics.hpp
+	<string>
+
+1524469764 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak9\koord.hpp
+	<string>
+
+1523889414 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak9\inserttext.cpp
+	"inserttext.hpp"
+	<string>
+
+1524567738 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak9\inserttext.hpp
+	"widget.hpp"
+
+1523888287 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak9\main.cpp
+	"graphics.hpp"
+	<fstream>
+	<vector>
+	<time.h>
+	"widget.hpp"
+	"numset.hpp"
+	"choose.hpp"
+	"window.hpp"
+	"mywindow.hpp"
+
+1523892536 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak9\numset.hpp
+	"widget.hpp"
+
+1524492053 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak9\window.hpp
+	"widget.hpp"
+	"graphics.hpp"
+	<vector>
+
+1524493899 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak9\mywindow.hpp
+	"window.hpp"
+	"widget.hpp"
+	"choose.hpp"
+	"numset.hpp"
+	"inserttext.hpp"
+	"simpletext.hpp"
+	"koord.hpp"
+	"messagebutton.hpp"
+	<string>
+
+1524472919 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak9\simpletext.hpp
+	"widget.hpp"
+	<string>
+
+1524494607 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak9\messagebutton.hpp
+	"pushbutton.hpp"
+	"mywindow.hpp"
+	<string>
+
+1524494159 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak9\pushbutton.hpp
+	"widget.hpp"
+	<string>
+
+1524494547 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak9\mywindow.cpp
+	"mywindow.hpp"
+	<sstream>
+
+1523892536 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak9\numset.cpp
+	"numset.hpp"
+	<string>
+
+1523830234 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak9\widget.cpp
+	"widget.hpp"
+
+1524566738 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak9\messagebutton.cpp
+	"messagebutton.hpp"
+	<iostream>
+
+1524494070 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak9\pushbutton.cpp
+	"pushbutton.hpp"
+
+1524490632 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak9\simpletext.cpp
+	"simpletext.hpp"
+
+1524492368 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak9\window.cpp
+	"window.hpp"
+
+1524567681 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak10\choose.cpp
+	"choose.hpp"
+	<iostream>
+	<cmath>
+
+1524471736 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak10\choose.hpp
+	<vector>
+	<string>
+	"widget.hpp"
+	"koord.hpp"
+
+1523830242 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak10\widget.hpp
+	<cstdlib>
+	<sstream>
+	"graphics.hpp"
+
+1488228128 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak10\include\graphics.hpp
+	<string>
+
+1524469764 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak10\koord.hpp
+	<string>
+
+1523889414 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak10\inserttext.cpp
+	"inserttext.hpp"
+	<string>
+
+1524567759 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak10\inserttext.hpp
+	"widget.hpp"
+
+1523888287 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak10\main.cpp
+	"graphics.hpp"
+	<fstream>
+	<vector>
+	<time.h>
+	"widget.hpp"
+	"numset.hpp"
+	"choose.hpp"
+	"window.hpp"
+	"mywindow.hpp"
+
+1523892536 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak10\numset.hpp
+	"widget.hpp"
+
+1525703596 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak10\window.hpp
+	"widget.hpp"
+	"graphics.hpp"
+	<vector>
+
+1525703532 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak10\mywindow.hpp
+	"window.hpp"
+	"widget.hpp"
+	"choose.hpp"
+	"numset.hpp"
+	"inserttext.hpp"
+	"simpletext.hpp"
+	"koord.hpp"
+	"button.hpp"
+	<string>
+
+1525703010 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak10\simpletext.hpp
+	"widget.hpp"
+	<string>
+
+1524494607 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak10\messagebutton.hpp
+	"pushbutton.hpp"
+	"mywindow.hpp"
+	<string>
+
+1525703468 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak10\pushbutton.hpp
+	"widget.hpp"
+	<string>
+
+1524566738 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak10\messagebutton.cpp
+	"messagebutton.hpp"
+	<iostream>
+
+1523892536 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak10\numset.cpp
+	"numset.hpp"
+	<string>
+
+1525705098 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak10\pushbutton.cpp
+	"pushbutton.hpp"
+
+1523830234 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak10\widget.cpp
+	"widget.hpp"
+
+1525703468 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak10\button.cpp
+	"Button.hpp"
+	<string>
+
+1525703314 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak10\button.hpp
+	"widget.hpp"
+	"pushbutton.hpp"
+	<string>
+	<functional>
+
+1525705181 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak10\mywindow.cpp
+	"mywindow.hpp"
+	<sstream>
+
+1525703010 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak10\simpletext.cpp
+	"simpletext.hpp"
+
+1525705134 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak10\window.cpp
+	"window.hpp"
+
