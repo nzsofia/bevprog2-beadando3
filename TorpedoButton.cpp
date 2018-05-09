@@ -39,11 +39,7 @@ if (ev.type==ev_mouse && ev.button==btn_left){
         if(isOver(ev.pos_x,ev.pos_y)) set_select(true);
     }
     if (selected){
-        if(aktiv)
-        {
-            if(!jelolve) jelolve=true;
-        }
-        action();
+        action(); //lehet be kéne rakni az aktívba, attól függ mit fog csinálni
         set_select(false);
     }
 }

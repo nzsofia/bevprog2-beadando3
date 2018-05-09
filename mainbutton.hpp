@@ -12,6 +12,7 @@ public:
     virtual void draw() const;
     virtual void eventHandler(const genv::event &ev);
     void action();
+    void felirat_valtoztat(string mod_felirat);
     std::string get_value() const;
 };
 #endif // PUSHBUTTON_HPP

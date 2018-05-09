@@ -30,6 +30,10 @@ void MainButton::action()
 {
     fv();
 }
+void MainButton::felirat_valtoztat(string mod_felirat)
+{
+    felirat=mod_felirat;
+}
 std::string MainButton::get_value() const
 {
     return felirat;

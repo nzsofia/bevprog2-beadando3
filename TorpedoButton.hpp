@@ -8,6 +8,8 @@ class TorpedoButton: public MainButton
     bool hajo;
     bool jelolve;
     bool sullyedt;
+    int sor;
+    int oszlop;
 public:
     void draw() const;
     void eventHandler(const genv::event &ev);

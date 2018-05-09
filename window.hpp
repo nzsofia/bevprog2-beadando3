@@ -7,7 +7,7 @@ class Window{
 protected:
     std::vector<Widget*> widgetek;
 public:
-    void eventloop();
+    virtual void eventloop();
     virtual ~Window();
 };
 #endif // WINDOW_HPP
