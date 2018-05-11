@@ -3,10 +3,10 @@
 #include <vector>
 #include <time.h>
 #include "widget.hpp"
-#include "numset.hpp"
 #include "choose.hpp"
 #include "window.hpp"
-#include "mywindow.hpp"
+#include "GameController.hpp"
+#include <iostream>
 using namespace genv;
 using namespace std;
 
@@ -37,7 +37,8 @@ int main()
         tomb[i]=NULL;
         tomb.erase(tomb.begin()+i);
     }*/
-    Mywindow * win1= new Mywindow();
+    GameController * win1= new GameController();
+    cout << "constructor?" << endl;
     win1->eventloop();
     return 0;
 }

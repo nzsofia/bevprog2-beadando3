@@ -1,9 +1,10 @@
 #include "TorpedoButton.hpp"
 
-TorpedoButton::TorpedoButton(int _x, int _y, int _meretx, int _merety, std::string _felirat, std::function <void()> _fv,int _sor,int _oszlop):
-    MainButton(_x,_y,_meretx,_merety,_felirat, _fv,_sor,_oszlop)
+using namespace genv;
+TorpedoButton::TorpedoButton(int _x, int _y, int _meretx, int _merety, std::string _felirat, std::function <void()> _fv,bool _aktiv,int _sor,int _oszlop):
+    MainButton(_x,_y,_meretx,_merety,_felirat, _fv,_aktiv),sor(_sor),oszlop(_oszlop)
 {
-    aktiv=true;
+    aktiv=_aktiv;
     hajo=sullyedt=jelolve=false;
 }
 void TorpedoButton::draw() const
@@ -43,6 +44,7 @@ void TorpedoButton::eventHandler(const event &ev)
 {
 if (ev.type==ev_mouse && ev.button==btn_left){
         if(isOver(ev.pos_x,ev.pos_y)) set_select(true);
+        else set_select(false);
     }
     if (selected){
         action(); //lehet be kéne rakni az aktívba, attól függ mit fog csinálni

@@ -3,7 +3,7 @@
 #include "widget.hpp"
 class InsertText: public Widget
 {
-    std::string szoveg;
+    std::string szoveg=" ";
     int szov_veg=0;
 public:
     InsertText(int _x,int _y, int _meretx, int _merety);

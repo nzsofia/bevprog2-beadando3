@@ -1,14 +1,15 @@
-#include "pushbutton.hpp"
+#include "mainbutton.hpp"
 
 using namespace genv;
+using namespace std;
 
-
-MainButton::MainButton(int _x, int _y, int _meretx, int _merety,std::string _felirat, std::function <void()> _fv): Widget(_x,_y,_meretx,_merety)
+MainButton::MainButton(int _x, int _y, int _meretx, int _merety,std::string _felirat, std::function <void()> _fv,bool _aktiv): Widget(_x,_y,_meretx,_merety)
 {
     fv=_fv;
     felirat=_felirat;
+    aktiv=_aktiv;
 }
-virtual void MainButton::draw() const
+void MainButton::draw() const
 {
     gout<<color(255,255,255)<<move_to(x,y)<<box(meretx,merety);
     if(selected) gout<<color(51,15,255);
@@ -16,12 +17,13 @@ virtual void MainButton::draw() const
     gout<<move_to(x+1,y+1)<<box(meretx-2,merety-2);
     gout<<color(255,255,255)<<move_to(x+meretx/2-gout.twidth(felirat)/2,y+merety/2+gout.cascent()/2)<<text(felirat);
 }
-virtual void MainButton::eventHandler(const event &ev)
+void MainButton::eventHandler(const event &ev)
 {
     if(aktiv)
     {
         if (ev.type==ev_mouse && ev.button==btn_left){
             if(isOver(ev.pos_x,ev.pos_y)) set_select(true);
+            else set_select(false);
         }
     }
     if (selected){

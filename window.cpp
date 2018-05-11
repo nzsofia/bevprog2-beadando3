@@ -1,7 +1,7 @@
 #include "window.hpp"
 
 using namespace genv;
-virtual void Window::eventloop()
+void Window::eventloop()
 {
     event ev;
     while(gin >> ev)

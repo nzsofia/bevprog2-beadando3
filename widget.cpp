@@ -26,4 +26,9 @@ void Widget::set_select(bool selected_val)
 {
     selected=selected_val;
 }
+void Widget::set_position(int new_x, int new_y)
+{
+    x=new_x;
+    y=new_y;
+}
 

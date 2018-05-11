@@ -11,7 +11,7 @@ class TorpedoButton: public MainButton
     int sor;
     int oszlop;
 public:
-    TorpedoButton(int _x, int _y, int _meretx, int _merety, std::string _felirat, std::function <void()> _fv,int _sor,int _oszlop);
+    TorpedoButton(int _x, int _y, int _meretx, int _merety, std::string _felirat, std::function <void()> _fv,bool _aktiv,int _sor,int _oszlop);
     void draw() const;
     void eventHandler(const genv::event &ev);
     bool get_hajo();

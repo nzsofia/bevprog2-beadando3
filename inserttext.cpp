@@ -28,7 +28,8 @@ void InsertText::eventHandler(const event &ev)
 {
     if (ev.type==ev_mouse && ev.button==btn_left)
     {
-        isOver(ev.pos_x,ev.pos_y);
+        if(isOver(ev.pos_x,ev.pos_y)) set_select(true);
+        else set_select(false);
     }
     if (selected)
         {
