@@ -1,5 +1,11 @@
 #include "TorpedoButton.hpp"
 
+TorpedoButton::TorpedoButton(int _x, int _y, int _meretx, int _merety, std::string _felirat, std::function <void()> _fv,int _sor,int _oszlop):
+    MainButton(_x,_y,_meretx,_merety,_felirat, _fv,_sor,_oszlop)
+{
+    aktiv=true;
+    hajo=sullyedt=jelolve=false;
+}
 void TorpedoButton::draw() const
 {
     if (aktiv)
@@ -42,4 +48,20 @@ if (ev.type==ev_mouse && ev.button==btn_left){
         action(); //lehet be kéne rakni az aktívba, attól függ mit fog csinálni
         set_select(false);
     }
+}
+bool TorpedoButton::get_hajo()
+{
+    return hajo;
+}
+void TorpedoButton::set_hajo(bool hajo_val)
+{
+    hajo=hajo_val;
+}
+int TorpedoButton::get_sor()
+{
+    return sor;
+}
+int TorpedoButton::get_oszlop()
+{
+    return oszlop;
 }

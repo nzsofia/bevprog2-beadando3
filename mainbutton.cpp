@@ -18,8 +18,11 @@ virtual void MainButton::draw() const
 }
 virtual void MainButton::eventHandler(const event &ev)
 {
-    if (ev.type==ev_mouse && ev.button==btn_left){
-        if(isOver(ev.pos_x,ev.pos_y)) set_select(true);
+    if(aktiv)
+    {
+        if (ev.type==ev_mouse && ev.button==btn_left){
+            if(isOver(ev.pos_x,ev.pos_y)) set_select(true);
+        }
     }
     if (selected){
         action();
@@ -30,9 +33,13 @@ void MainButton::action()
 {
     fv();
 }
-void MainButton::felirat_valtoztat(string mod_felirat)
+void MainButton::set_felirat(string mod_felirat)
 {
     felirat=mod_felirat;
+}
+void MainButton::set_aktiv(bool aktiv_val)
+{
+    aktiv=aktiv_val;
 }
 std::string MainButton::get_value() const
 {

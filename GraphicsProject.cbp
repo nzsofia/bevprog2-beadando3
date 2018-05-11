@@ -51,8 +51,6 @@
 		<Unit filename="main.cpp" />
 		<Unit filename="mainbutton.cpp" />
 		<Unit filename="mainbutton.hpp" />
-		<Unit filename="mywindow.cpp" />
-		<Unit filename="mywindow.hpp" />
 		<Unit filename="simpletext.cpp" />
 		<Unit filename="simpletext.hpp" />
 		<Unit filename="widget.cpp" />

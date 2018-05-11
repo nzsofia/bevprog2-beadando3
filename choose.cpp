@@ -4,22 +4,22 @@
 using namespace genv;
 using namespace std;
 
-Choose::Choose(vector<Koord> _valasztek,int _x, int _y,int _meretx,int _merety):Widget(_x,_y,_meretx,_merety),valasztek(_valasztek)
+Choose::Choose(vector<string> _valasztek,int _x, int _y,int _meretx,int _merety):Widget(_x,_y,_meretx,_merety),valasztek(_valasztek)
 {
     int maximum=0;
-    for(Koord &szoveg: valasztek)
+    for(string &szoveg: valasztek)
     {
-        if(maximum<gout.twidth(szoveg.nev)) maximum=gout.twidth(szoveg.nev);
+        if(maximum<gout.twidth(szoveg)) maximum=gout.twidth(szoveg);
     }
     szelesseg=maximum+10+16;
     hossz=(gout.cascent()+gout.cdescent()+10)*3;
 }
-Choose::Choose(vector<Koord> _valasztek,int _x, int _y,int _meretx,int _merety, int _hossz):Widget(_x,_y,_meretx,_merety),valasztek(_valasztek),hossz(_hossz)
+Choose::Choose(vector<string> _valasztek,int _x, int _y,int _meretx,int _merety, int _hossz):Widget(_x,_y,_meretx,_merety),valasztek(_valasztek),hossz(_hossz)
 {
     int maximum=0;
-    for(Koord &szoveg: valasztek)
+    for(string &szoveg: valasztek)
     {
-        if(maximum<gout.twidth(szoveg.nev)) maximum=gout.twidth(szoveg.nev);
+        if(maximum<gout.twidth(szoveg)) maximum=gout.twidth(szoveg);
     }
     szelesseg=maximum+10+16;
 }
@@ -55,12 +55,12 @@ void Choose::draw() const
 
             gout<<color(51,15,255);
             gout<<move_to(x,y+merety+(gout.cascent()+gout.cdescent()+10)*(i))<<box(szelesseg,(gout.cascent()+gout.cdescent()+10));
-            if(valasztek[listakezdet+i].nev==ertek)
+            if(valasztek[listakezdet+i]==ertek)
             {
                 gout<<color(255,0,0);
                 gout<<move_to(x,y+merety+(gout.cascent()+gout.cdescent()+10)*(i))<<box(szelesseg-16,(gout.cascent()+gout.cdescent()+10));
             }
-            gout<<color(255,255,255)<<move_to(x+(szelesseg-16)/2-gout.twidth(valasztek[listakezdet+i].nev)/2,y+merety+(gout.cascent()+gout.cdescent()+10)*(i)+(gout.cascent()+gout.cdescent()+10)/2+gout.cascent()/2)<<text(valasztek[listakezdet+i].nev);
+            gout<<color(255,255,255)<<move_to(x+(szelesseg-16)/2-gout.twidth(valasztek[listakezdet+i])/2,y+merety+(gout.cascent()+gout.cdescent()+10)*(i)+(gout.cascent()+gout.cdescent()+10)/2+gout.cascent()/2)<<text(valasztek[listakezdet+i]);
             gout<<move_to(x+szelesseg-16,y+merety)<<line(0,hossz)<<genv::move(0,-hossz/2)<<line(16,0);
             gout<<move_to(x+szelesseg-16+2,y+merety+hossz/4)<<line(16/2-2,-(hossz/4-1))<<line(16/2-2,hossz/4-1);
             gout<<move_to(x+szelesseg-16+2,y+merety+3*hossz/4)<<line(16/2-2,hossz/4-1)<<line(16/2-2,-(hossz/4-1));
@@ -101,7 +101,7 @@ void Choose::eventHandler(const genv::event &ev)
             {
                 if(listakezdet+(ev.pos_y-(y+merety))/(gout.cascent()+gout.cdescent()+10)<valasztek.size())
                 {
-                    ertek=valasztek[listakezdet+(ev.pos_y-(y+merety))/(gout.cascent()+gout.cdescent()+10)].nev;
+                    ertek=valasztek[listakezdet+(ev.pos_y-(y+merety))/(gout.cascent()+gout.cdescent()+10)];
                     legordul=false;
                 }
             }
@@ -129,34 +129,6 @@ void Choose::eventHandler(const genv::event &ev)
 }
 string Choose::get_value() const
 {
-    string val;
-    for (Koord i: valasztek)
-    {
-        if (i.nev == ertek)
-        {
-            val=ertek+" "+i.telszam;
-        }
-    }
-    return val;
+    return ertek;
 }
-void Choose::hozzaad(const string val)
-{
-    if (val.find("+")!=string::npos)
-    {
-    size_t pos=val.find("+");
-    string _telszam=val.substr(pos);
-    string _nev=val.substr(0,val.length()-_telszam.length()-1);
-    Koord k(_nev,_telszam);
-    valasztek.push_back(k);
-    }
-}
-void Choose::torol(const int elem)
-{
-    valasztek.erase(valasztek.begin()+elem-1);
-}
-int Choose::get_darab()
-{
-    return valasztek.size();
-}
-
 

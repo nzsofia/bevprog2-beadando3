@@ -366,3 +366,67 @@
 1525705134 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\gyak10\window.cpp
 	"window.hpp"
 
+1524567681 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\beadando3\bevprog2-beadando3\choose.cpp
+	"choose.hpp"
+	<iostream>
+	<cmath>
+
+1524471736 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\beadando3\bevprog2-beadando3\choose.hpp
+	<vector>
+	<string>
+	"widget.hpp"
+	"koord.hpp"
+
+1525786799 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\beadando3\bevprog2-beadando3\widget.hpp
+	<cstdlib>
+	<sstream>
+	"graphics.hpp"
+
+1488228128 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\beadando3\bevprog2-beadando3\include\graphics.hpp
+	<string>
+
+1523889414 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\beadando3\bevprog2-beadando3\inserttext.cpp
+	"inserttext.hpp"
+	<string>
+
+1524567759 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\beadando3\bevprog2-beadando3\inserttext.hpp
+	"widget.hpp"
+
+1523888287 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\beadando3\bevprog2-beadando3\main.cpp
+	"graphics.hpp"
+	<fstream>
+	<vector>
+	<time.h>
+	"widget.hpp"
+	"numset.hpp"
+	"choose.hpp"
+	"window.hpp"
+	"mywindow.hpp"
+
+1525873112 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\beadando3\bevprog2-beadando3\window.hpp
+	"widget.hpp"
+	"graphics.hpp"
+	<vector>
+
+1525703532 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\beadando3\bevprog2-beadando3\mywindow.hpp
+	"window.hpp"
+	"widget.hpp"
+	"choose.hpp"
+	"numset.hpp"
+	"inserttext.hpp"
+	"simpletext.hpp"
+	"koord.hpp"
+	"button.hpp"
+	<string>
+
+1525703010 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\beadando3\bevprog2-beadando3\simpletext.hpp
+	"widget.hpp"
+	<string>
+
+1525705181 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\beadando3\bevprog2-beadando3\mywindow.cpp
+	"mywindow.hpp"
+	<sstream>
+
+1525703010 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\beadando3\bevprog2-beadando3\simpletext.cpp
+	"simpletext.hpp"
+
