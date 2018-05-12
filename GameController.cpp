@@ -55,13 +55,19 @@ GameController::GameController()
     {
         this->jatek();
     },true);
-    hajok=vector<vector<TorpedoButton*>>(3);
+    jatekos_valt=new MainButton(max_x/2-60,max_y-50,120,30,"Jatekos valtas", [this]()
+    {
+        this->jatekos_valto();
+    },false);
+    hajok1=vector<vector<TorpedoButton*>>(3);
+    hajok2=vector<vector<TorpedoButton*>>(3);
     palya1=vector<vector<TorpedoButton*>> (sorszam,vector<TorpedoButton*> (oszlopszam));
     palya2=vector<vector<TorpedoButton*>> (sorszam,vector<TorpedoButton*> (oszlopszam));
-    for (int i=0; i<hajok.size(); i++)
+    for (int i=0; i<hajok1.size(); i++)
     {
         vector<TorpedoButton*> hajo(i+2);
-        hajok[i]=hajo;
+        hajok1[i]=hajo;
+        hajok2[i]=hajo;
     }
     for (int i=0; i<palya1.size(); i++)
     {
@@ -71,10 +77,7 @@ GameController::GameController()
             {
                 this->beallitas_hajokent(i,j,1);
             },false,i,j);
-            palya2[i][j]=new TorpedoButton(420+j*60,150+i*60,60,60,"",[this,i,j]()
-            {
-                this->beallitas_hajokent(i,j,2);
-            },false,i,j);
+            palya2[i][j]=new TorpedoButton(420+j*60,150+i*60,60,60,"",[this,i,j](){this->beallitas_hajokent(i,j,2);},false,i,j);
         }
     }
     widgetek.push_back(play);
@@ -135,16 +138,16 @@ void GameController::palya1_beallit()
     widgetek.push_back(jatekos1_name);
     widgetek.push_back(hajotipus);
     hajoszam=0;
-    kattintas_szam=hajok[0].size();
+    kattintas_szam=hajok1[0].size();
 }
 void GameController::hajo_veglegesit()
 {
     if (kattintas_szam==0)
     {
-        if (hajoszam<hajok.size()-1)
+        if (hajoszam<hajok1.size()-1)
         {
             hajoszam++;
-            kattintas_szam=hajok[hajoszam].size();
+            kattintas_szam=hajok1[hajoszam].size();
             hajotipus->kiurit();
             hajotipus->setText(itos(kattintas_szam)+" elemu hajo");
             irany->set_aktiv(true);
@@ -166,13 +169,18 @@ void GameController::beallitas_hajokent(int sor, int oszlop, int jatekos)
     if (kattintas_szam>0)
     {
         vector<vector<TorpedoButton*>> * palya;
-        if (jatekos==1) palya= &palya1;
-        else palya= &palya2;
+        vector<vector<TorpedoButton*>> * hajok;
+        if (jatekos==1)
+        {
+            palya= &palya1;
+            hajok= &hajok1;
+        }
+        else {palya= &palya2; hajok= &hajok2;}
         if((*palya)[sor][oszlop]->get_hajo()==false)
         {
             if(irany->get_value()=="vizszintes")
             {
-                if(kattintas_szam==hajok[hajoszam].size() && (oszlop-kattintas_szam+1>=0 || oszlop+kattintas_szam-1<oszlopszam))
+                if(kattintas_szam==(*hajok)[hajoszam].size() && (oszlop-kattintas_szam+1>=0 || oszlop+kattintas_szam-1<oszlopszam))
                 {
                     bool utban_van_hajo=false;
                     int helyek_szama=1;
@@ -190,28 +198,28 @@ void GameController::beallitas_hajokent(int sor, int oszlop, int jatekos)
                     if(helyek_szama>=kattintas_szam)
                     {
                         (*palya)[sor][oszlop]->set_hajo(true);
-                        hajok[hajoszam][kattintas_szam-1]=(*palya)[sor][oszlop];
+                        (*hajok)[hajoszam][kattintas_szam-1]=(*palya)[sor][oszlop];
                         irany->set_aktiv(false);
                         kattintas_szam--;
                     }
                 }
-                else if(kattintas_szam<hajok[hajoszam].size() && sor==hajok[hajoszam][kattintas_szam]->get_sor()) //abban a sorban van ahol a hajo többi eleme
+                else if(kattintas_szam<(*hajok)[hajoszam].size() && sor==(*hajok)[hajoszam][kattintas_szam]->get_sor()) //abban a sorban van ahol a hajo többi eleme
                 {
                     int elotte;
                     int utana;
                     oszlop-1<0 ? elotte=1 : elotte=oszlop-1;
                     oszlop+1>oszlopszam-1 ? utana=oszlopszam-2 : utana=oszlop+1;
-                    if((*palya)[sor][elotte]==hajok[hajoszam][kattintas_szam] || (*palya)[sor][elotte]==hajok[hajoszam][hajok[hajoszam].size()-1] || (*palya)[sor][utana]==hajok[hajoszam][kattintas_szam] || (*palya)[sor][utana]==hajok[hajoszam][hajok[hajoszam].size()-1])
+                    if((*palya)[sor][elotte]==(*hajok)[hajoszam][kattintas_szam] || (*palya)[sor][elotte]==(*hajok)[hajoszam][(*hajok)[hajoszam].size()-1] || (*palya)[sor][utana]==(*hajok)[hajoszam][kattintas_szam] || (*palya)[sor][utana]==(*hajok)[hajoszam][(*hajok)[hajoszam].size()-1])
                     {
                         (*palya)[sor][oszlop]->set_hajo(true);
-                        hajok[hajoszam][kattintas_szam-1]=(*palya)[sor][oszlop];
+                        (*hajok)[hajoszam][kattintas_szam-1]=(*palya)[sor][oszlop];
                         kattintas_szam--;
                     }
                 }
             }
             else
             {
-                if(kattintas_szam==hajok[hajoszam].size() && (sor-kattintas_szam+1>=0 || sor+kattintas_szam-1<sorszam))
+                if(kattintas_szam==(*hajok)[hajoszam].size() && (sor-kattintas_szam+1>=0 || sor+kattintas_szam-1<sorszam))
                 {
                     bool utban_van_hajo=false;
                     int maxi;
@@ -226,26 +234,24 @@ void GameController::beallitas_hajokent(int sor, int oszlop, int jatekos)
                         }
                         else helyek_szama++;
                     }
-                    cout<<"h "<<helyek_szama<<endl;
-                    cout<<kattintas_szam<<endl;
                     if(helyek_szama>=kattintas_szam)
                     {
                         (*palya)[sor][oszlop]->set_hajo(true);
-                        hajok[hajoszam][kattintas_szam-1]=(*palya)[sor][oszlop];
+                        (*hajok)[hajoszam][kattintas_szam-1]=(*palya)[sor][oszlop];
                         irany->set_aktiv(false);
                         kattintas_szam--;
                     }
                 }
-                else if(kattintas_szam<hajok[hajoszam].size() && oszlop==hajok[hajoszam][kattintas_szam]->get_oszlop()) //abban az oszlopban van ahol a hajo többi eleme
+                else if(kattintas_szam<(*hajok)[hajoszam].size() && oszlop==(*hajok)[hajoszam][kattintas_szam]->get_oszlop()) //abban az oszlopban van ahol a hajo többi eleme
                 {
                     int elotte;
                     int utana;
                     sor-1<0 ? elotte=1 : elotte=sor-1;
                     sor+1>sorszam-1 ? utana=sorszam-2 : utana=sor+1;
-                    if((*palya)[elotte][oszlop]==hajok[hajoszam][kattintas_szam] || (*palya)[elotte][oszlop]==hajok[hajoszam][hajok[hajoszam].size()-1] || (*palya)[utana][oszlop]==hajok[hajoszam][kattintas_szam] || (*palya)[utana][oszlop]==hajok[hajoszam][hajok[hajoszam].size()-1])
+                    if((*palya)[elotte][oszlop]==(*hajok)[hajoszam][kattintas_szam] || (*palya)[elotte][oszlop]==(*hajok)[hajoszam][(*hajok)[hajoszam].size()-1] || (*palya)[utana][oszlop]==(*hajok)[hajoszam][kattintas_szam] || (*palya)[utana][oszlop]==(*hajok)[hajoszam][(*hajok)[hajoszam].size()-1])
                     {
                         (*palya)[sor][oszlop]->set_hajo(true);
-                        hajok[hajoszam][kattintas_szam-1]=(*palya)[sor][oszlop];
+                        (*hajok)[hajoszam][kattintas_szam-1]=(*palya)[sor][oszlop];
                         kattintas_szam--;
                     }
                 }
@@ -257,7 +263,7 @@ void GameController::beallitas_hajokent(int sor, int oszlop, int jatekos)
 }
 void GameController::palya2_beallit()
 {
-    if(hajoszam==hajok.size()-1 && kattintas_szam==0)
+    if(hajoszam==hajok1.size()-1 && kattintas_szam==0)
     {
         widgetek.clear();
         terminate=true;
@@ -276,7 +282,7 @@ void GameController::palya2_beallit()
         widgetek.push_back(jatekos2_name);
         widgetek.push_back(hajotipus);
         hajoszam=0;
-        kattintas_szam=hajok[hajoszam].size();
+        kattintas_szam=hajok1[hajoszam].size();
         hajotipus->kiurit();
         hajotipus->setText(itos(kattintas_szam)+" elemu hajo");
         irany->set_aktiv(true);
@@ -284,11 +290,111 @@ void GameController::palya2_beallit()
 }
 void GameController::jatek()
 {
-    if(hajoszam==hajok.size()-1 && kattintas_szam==0)
+    if(hajoszam==hajok1.size()-1 && kattintas_szam==0)
     {
         widgetek.clear();
         terminate=true;
         gout<<move_to(0,0)<<color(0,0,0)<<box(max_x,max_y);
+        for (int i=0; i<palya1.size(); i++)
+        {
+            for (int j=0; j<palya1[i].size(); j++)
+            {
+                palya1[i][j]->set_fv([this,i,j](){this->lovoldoz(i,j,1);});
+                widgetek.push_back(palya1[i][j]);
+                palya2[i][j]->set_aktiv(true);
+                palya2[i][j]->set_fv([this,i,j](){this->lovoldoz(i,j,2);});
+                widgetek.push_back(palya2[i][j]);
+            }
+        }
+        widgetek.push_back(jatekos_valt);
+        jatekos1_name->set_position(10,80);
+        jatekos2_name->set_position(420,80);
+        widgetek.push_back(jatekos1_name);
+        kattintas_szam=1;
+    }
+}
+void GameController::jatekos_valto()
+{
+    if (kattintas_szam==0)
+    {
+        terminate=true;
+        gout<<move_to(0,0)<<color(0,0,0)<<box(max_x,max_y);
+         bool jatekos1=false;
+         if(widgetek[widgetek.size()-1]->get_value()==jatekos1_name->get_value())jatekos1=true;//a widgetek utolso helyén a jatekos neve van
+         vector<vector<TorpedoButton*>> * ellenfelpalya;
+         vector<vector<TorpedoButton*>> * sajatpalya;
+        if(jatekos1)
+        {
+        widgetek.pop_back(); //kiszedi az eddigi jatekos nevet
+        widgetek.push_back(jatekos2_name);
+        ellenfelpalya=&palya1;
+        sajatpalya=&palya2;
+        }
+        else
+        {
+            widgetek.pop_back(); //kiszedi az eddigi jatekos nevet
+            widgetek.push_back(jatekos1_name);
+            ellenfelpalya=&palya2;
+            sajatpalya=&palya1;
+        }
+        for (int i=0; i<palya1.size(); i++)
+        {
+            for (int j=0; j<palya1[i].size(); j++)
+            {
+                (*ellenfelpalya)[i][j]->set_aktiv(true); //azert aktiv, mert az ellenfel palyajan lehet kattintgatni
+                (*sajatpalya)[i][j]->set_aktiv(false);
+            }
+        }
+        jatekos_valt->set_aktiv(false);
+    }
+}
+void GameController::lovoldoz(int sor, int oszlop, int jatekos)
+{
+    if(kattintas_szam>0)
+    {
+        vector<vector<TorpedoButton*>> * palya;
+        vector<vector<TorpedoButton*>> * hajok;
+        if (jatekos==1) {palya= &palya1; hajok=&hajok1;}
+        else {palya= &palya2; hajok=&hajok2; cout<<"jatekos2"<<endl;}
+        (*palya)[sor][oszlop]->set_jelolve(true);
+        kattintas_szam--;
+        for(int i=0;i<(*hajok).size();i++)
+        {
+            int jeloltek_szama=0;
+            for (int j=0; j<(*hajok)[i].size();j++)
+            {
+                if((*hajok)[i][j]->get_jelolve()) jeloltek_szama++;
+                //elsullyedt?
+            }
+            if(jeloltek_szama==(*hajok)[i].size())//ha a hajó minden eleme meg van jelölve akkor elsüllyedt
+            {
+                for(TorpedoButton* torp: (*hajok)[i])
+                {
+                    torp->set_sullyedt(true);
+                }
+                (*hajok)[i]=(*hajok)[(*hajok).size()-1];//töröljük a hajót a hajók közül
+                (*hajok).pop_back();
+            }
+        }
+        if((*hajok).size()==0)
+        {
+            widgetek.clear();
+            terminate=true;
+            gout<<move_to(0,0)<<color(0,0,0)<<box(max_x,max_y);
+            //Game over
+        }
+        else
+        {
+            for (int i=0; i<palya1.size(); i++)
+            {
+                for (int j=0; j<palya1[i].size(); j++)
+                {
+                    (*palya)[i][j]->set_aktiv(true);
+                    cout<<"most el szurkulok"<<endl; //azert aktiv, hogy ne lehessen látni az elhelyezett hajókat
+                }
+            }
+            jatekos_valt->set_aktiv(true);
+        }
     }
 }
 

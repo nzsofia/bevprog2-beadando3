@@ -67,3 +67,19 @@ int TorpedoButton::get_oszlop()
 {
     return oszlop;
 }
+void TorpedoButton::set_fv(std::function <void()> fv_mod)
+{
+    fv=fv_mod;
+}
+void TorpedoButton::set_jelolve(bool jelolve_mod)
+{
+    jelolve=jelolve_mod;
+}
+bool TorpedoButton::get_jelolve()
+{
+    return jelolve;
+}
+void TorpedoButton::set_sullyedt(bool sullyedt_mod)
+{
+    sullyedt=sullyedt_mod;
+}

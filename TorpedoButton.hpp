@@ -18,5 +18,9 @@ public:
     void set_hajo(bool hajo_val);
     int get_sor();
     int get_oszlop();
+    void set_fv(std::function <void()> fv_mod);
+    void set_jelolve(bool jelolve_mod);
+    bool get_jelolve();
+    void set_sullyedt(bool sullyedt_mod);
 };
 #endif // TORPEDOBUTTON_HPP
