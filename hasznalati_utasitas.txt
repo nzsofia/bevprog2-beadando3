@@ -1,0 +1,31 @@
+Használati útmutató:
+-a fehér keretes kék widgetek gombok, ezekre lehet kattintani
+kivéve ha épp nem aktívak
+-a zöld widgetek csak szöveg megjelenítésre szolgálnak
+-Play gomb megnyomása után be lehet gépelni a játékosok nevét
+ezen mezõk üresen hagyása automatikus játékosnevet állít be
+-hajók lerakása a pálya beállításkor:
+	*vizszintes feliratú gomb kattintára függõlegesre vált majd vissza,
+	 ezzel lehet a hajó irányát beállítani
+	*miután az elsõ hajóelem le lett rakva, az irányon már nem lehet változatni
+	 csak a következõ hajó lerakása elõtt
+	*mindig annyi elembõl álló hajót lehet lerakni,
+	 ahányat a felirat épp ír
+	*elem lerakása a kívánt mezõre való kattintáskor történik
+	*hajó új elemét csak már meglévõ elem mellé lehet rakni
+	*ha a hajó minden eleme le lett rakva a Következõ hajó gombra kattintva
+	 lehet az új hajót lrakni
+-A játék elején mindkét pálya inaktív, a Kezdõdhet gombra kattintva tud az elsõ játékos lõni
+-A sikeres lövés után ismét inaktívak lesznek a pályák, amíg a két játékos helyet cserél
+-ezután a Játékos váltás gombra kattintva tud a második játékos lõni
+-Lõni az ellenfél mezõjére kattintással lehet, pontosan egyszer
+ és csak olyan mezõre, mely még nem volt lõve
+-A játék addig tart míg az egyik játékosnak el nem süllyedt az összes hajója
+-Színkódok a játék során:
+fehér: saját hajó
+kék: víz
+sötétebb kék: víz, melyre az ellenfél lõtt
+fehér, piros kereszttel: eltalálták a saját hajót
+piros: saját hajó elsüllyedt
+narancs: ellenfél hajója eltalálva
+zöld: ellenfél hajója elsüllyedt

@@ -4,10 +4,11 @@
 #include <string>
 #include <functional>
 
-class MainButton: public Widget{
+class MainButton: public Widget
+{
 protected:
     std::string felirat;
-    bool aktiv;
+    bool aktiv; //kattintásra történhet-e valami vagy sem
     std::function <void()> fv;
 public:
     MainButton(int _x, int _y, int _meretx, int _merety, std::string _felirat, std::function <void()> _fv,bool _aktiv);

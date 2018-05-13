@@ -21,12 +21,14 @@ void MainButton::eventHandler(const event &ev)
 {
     if(aktiv)
     {
-        if (ev.type==ev_mouse && ev.button==btn_left){
+        if (ev.type==ev_mouse && ev.button==btn_left)
+        {
             if(isOver(ev.pos_x,ev.pos_y)) set_select(true);
             else set_select(false);
         }
     }
-    if (selected){
+    if (selected)
+    {
         action();
         set_select(false);
     }

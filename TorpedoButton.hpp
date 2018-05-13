@@ -4,9 +4,8 @@
 
 class TorpedoButton: public MainButton
 {
-    //lehet r· kattintani stb, ellenfÈl t·bl·j·n aktÌvak az elemek
     bool hajo;
-    bool jelolve;
+    bool jelolve;//r√°l≈ëtt az ellenf√©l
     bool sullyedt;
     int sor;
     int oszlop;

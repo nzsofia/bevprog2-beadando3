@@ -384,22 +384,17 @@
 1488228128 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\beadando3\bevprog2-beadando3\include\graphics.hpp
 	<string>
 
-1526234177 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\beadando3\bevprog2-beadando3\inserttext.cpp
+1526251673 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\beadando3\bevprog2-beadando3\inserttext.cpp
 	"inserttext.hpp"
 	<string>
 
 1526057206 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\beadando3\bevprog2-beadando3\inserttext.hpp
 	"widget.hpp"
 
-1526225484 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\beadando3\bevprog2-beadando3\main.cpp
+1526251852 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\beadando3\bevprog2-beadando3\main.cpp
 	"graphics.hpp"
-	<fstream>
-	<vector>
 	<time.h>
-	"widget.hpp"
-	"window.hpp"
 	"GameController.hpp"
-	<iostream>
 
 1525873112 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\beadando3\bevprog2-beadando3\window.hpp
 	"widget.hpp"
@@ -417,7 +412,7 @@
 	"button.hpp"
 	<string>
 
-1525703010 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\beadando3\bevprog2-beadando3\simpletext.hpp
+1526253952 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\beadando3\bevprog2-beadando3\simpletext.hpp
 	"widget.hpp"
 	<string>
 
@@ -425,33 +420,32 @@
 	"mywindow.hpp"
 	<sstream>
 
-1526238856 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\beadando3\bevprog2-beadando3\simpletext.cpp
+1526252124 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\beadando3\bevprog2-beadando3\simpletext.cpp
 	"simpletext.hpp"
 
-1526237899 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\beadando3\bevprog2-beadando3\gamecontroller.cpp
+1526253808 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\beadando3\bevprog2-beadando3\gamecontroller.cpp
 	"GameController.hpp"
 	<cstdlib>
-	<iostream>
 
-1526239572 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\beadando3\bevprog2-beadando3\gamecontroller.hpp
-	"window.hpp"
+1526252045 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\beadando3\bevprog2-beadando3\gamecontroller.hpp
 	"mainbutton.hpp"
 	"TorpedoButton.hpp"
 	"inserttext.hpp"
 	"simpletext.hpp"
+	<vector>
 
-1526044875 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\beadando3\bevprog2-beadando3\mainbutton.hpp
+1526253951 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\beadando3\bevprog2-beadando3\mainbutton.hpp
 	"widget.hpp"
 	<string>
 	<functional>
 
-1526170528 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\beadando3\bevprog2-beadando3\torpedobutton.hpp
+1526251799 e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\beadando3\bevprog2-beadando3\torpedobutton.hpp
 	"mainbutton.hpp"
 
 1526051037 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\beadando3\bevprog2-beadando3\mainbutton.cpp
 	"mainbutton.hpp"
 
-1526238596 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\beadando3\bevprog2-beadando3\torpedobutton.cpp
+1526252018 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\beadando3\bevprog2-beadando3\torpedobutton.cpp
 	"TorpedoButton.hpp"
 
 1526062045 source:e:\fontos dokumentumok\egyetem\tantárgyak\programozás\bevprogii\beadando3\bevprog2-beadando3\widget.cpp

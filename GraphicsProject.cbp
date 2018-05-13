@@ -53,8 +53,6 @@
 		<Unit filename="simpletext.hpp" />
 		<Unit filename="widget.cpp" />
 		<Unit filename="widget.hpp" />
-		<Unit filename="window.cpp" />
-		<Unit filename="window.hpp" />
 		<Extensions>
 			<code_completion />
 			<debugger />

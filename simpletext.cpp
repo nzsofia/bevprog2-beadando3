@@ -1,6 +1,8 @@
 #include "simpletext.hpp"
+
 using namespace std;
 using namespace genv;
+
 SimpleText::SimpleText(string kezdeti_szov, int _x, int _y, int _meretx, int _merety)
 {
     meretx=_meretx;
