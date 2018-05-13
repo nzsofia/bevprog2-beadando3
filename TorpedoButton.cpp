@@ -21,6 +21,7 @@ void TorpedoButton::draw() const
             else  gout<<color(139,0,139); //nem talalt jeloles
             gout<<move_to(x+1,y+1)<<box(meretx-2,merety-2);
         }
+        else gout<<color(0,0,0)<<move_to(x+1,y+1)<<box(meretx-2,merety-2);
         gout<<color(211,211,211); //keret szin
     }
     else

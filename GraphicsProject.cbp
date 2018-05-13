@@ -44,8 +44,6 @@
 		<Unit filename="GameController.hpp" />
 		<Unit filename="TorpedoButton.cpp" />
 		<Unit filename="TorpedoButton.hpp" />
-		<Unit filename="choose.cpp" />
-		<Unit filename="choose.hpp" />
 		<Unit filename="inserttext.cpp" />
 		<Unit filename="inserttext.hpp" />
 		<Unit filename="main.cpp" />

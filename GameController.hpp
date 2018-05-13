@@ -12,7 +12,6 @@ class GameController: public Window
     int sorszam=6;
     int oszlopszam=6;
     bool terminate=false;
-    bool mehet_a_jatek=false;
     MainButton * play;
     MainButton * exit_button;
     InsertText * jatekos1_name_input;
@@ -30,13 +29,14 @@ class GameController: public Window
     std::vector<std::vector<TorpedoButton*>> palya2;
     MainButton * jatekindit;
     MainButton * jatekos_valt;
+    SimpleText * nyertes;
 public:
     GameController();
     void eventloop();
     void jatek_elokeszit();
     void kilep();
     void palya1_beallit();
-    void hajo_veglegesit();
+    void kovetkezo_hajo_beallit();
     void irany_beallit();
     void beallitas_hajokent(int sor, int oszlop, int jatekos);
     void palya2_beallit();

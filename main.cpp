@@ -3,7 +3,6 @@
 #include <vector>
 #include <time.h>
 #include "widget.hpp"
-#include "choose.hpp"
 #include "window.hpp"
 #include "GameController.hpp"
 #include <iostream>
@@ -38,7 +37,6 @@ int main()
         tomb.erase(tomb.begin()+i);
     }*/
     GameController * win1= new GameController();
-    cout << "constructor?" << endl;
     win1->eventloop();
     return 0;
 }
