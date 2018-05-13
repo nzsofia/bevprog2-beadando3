@@ -33,11 +33,14 @@ void InsertText::eventHandler(const event &ev)
     }
     if (selected)
         {
+           if(szoveg.length()<12)
+           {
             if(ev.type==ev_key && ev.keycode>=20 && ev.keycode<=126 && ev.keycode!=key_backspace && ev.keycode!=key_right && ev.keycode!=key_left)//>=20 és <=126
             {
                 char a=char(ev.keycode);
                 if(szoveg.length()>0) szoveg.pop_back();
                 szoveg=szoveg+a+'|';
+            }
             }
             if(ev.type==ev_key && ev.keycode==key_backspace && szoveg.length()>1)
             {

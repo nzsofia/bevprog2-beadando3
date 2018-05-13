@@ -11,17 +11,13 @@ SimpleText::SimpleText(string kezdeti_szov, int _x, int _y, int _meretx, int _me
 }
 void SimpleText::draw() const
 {
-    gout<<color(255,255,255)<<move_to(x,y)<<box(meretx,merety);
-    if(selected) gout<<color(51,15,255);
-    else gout<<color(51,153,255);
-    gout<<move_to(x+1,y+1)<<box(meretx-2,merety-2);
+    if (selected) gout<<color(255,99,71);
+    else gout<<color(0,102,51);
+    gout<<move_to(x,y)<<box(meretx,merety);
     gout<<color(255,255,255)<<move_to(x+meretx/2-gout.twidth(szoveg)/2,y+merety/2+gout.cascent()/2)<<text(szoveg);
 }
 
-void SimpleText::eventHandler(const event &ev)
-{
-    if (ev.type==ev_mouse && ev.button==btn_left) isOver(ev.pos_x,ev.pos_y);
-}
+void SimpleText::eventHandler(const event &ev) {}
 void SimpleText::setText(const string szov)
 {
     szoveg=szoveg+szov;

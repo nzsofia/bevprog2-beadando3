@@ -33,8 +33,10 @@ class GameController: public Window
 public:
     GameController();
     void eventloop();
+    void uj_kepernyo();
     void jatek_elokeszit();
     void kilep();
+    void kozos_palyabeallitas(bool palya1_e);
     void palya1_beallit();
     void kovetkezo_hajo_beallit();
     void irany_beallit();
